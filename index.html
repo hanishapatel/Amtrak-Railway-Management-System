@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Railway System Login</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="header-title">Amtrak Railway System</h1>
+    </header>
+
+    <section id="content">
+      <div id="login-container" class="login-container">
+        <h2 class="login-title">Login</h2>
+        <form
+          id="login-form"
+          action="login.php"
+          method="post"
+          class="login-form"
+        >
+          <label for="userType" class="form-label">Select User Type:</label>
+          <select id="userType" name="userType" class="form-input" required>
+            <option value="passenger">Passenger</option>
+            <option value="employee">Employee</option>
+          </select>
+          <label for="username" class="form-label">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="form-input"
+            required
+          />
+          <label for="password" class="form-label">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-input"
+            required
+          />
+          <button type="submit" class="form-button">Login</button>
+          <button type="button" onclick="window.location.href='register.php'" class="form-button">Register</button>
+          
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p class="footer-text">&copy; Amtrak Railway System</p>
+    </footer>
+  </body>
+</html>
