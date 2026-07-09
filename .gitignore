@@ -1,0 +1,5 @@
+# OS / editor junk
+.DS_Store
+.vs/
+*.suo
+*.user

@@ -1,0 +1,24 @@
+<?php
+// -------------------------------------------------------------------
+//  connection.php for InfinityFree hosting.
+//  After you upload the site, open connection.php in the File Manager
+//  and replace its contents with this, filling in the 4 values from
+//  your InfinityFree control panel  ▸  "MySQL Databases".
+//
+//  IMPORTANT: on InfinityFree the host is NOT "localhost" — use the
+//  "MySQL Hostname" they give you (looks like sqlXXX.infinityfree.com).
+// -------------------------------------------------------------------
+
+$servername = "sqlXXX.infinityfree.com";     // MySQL Hostname
+$username   = "if0_XXXXXXXX";                 // MySQL Username
+$password   = "YOUR_ACCOUNT_PASSWORD";        // the password you chose at signup
+$dbname     = "if0_XXXXXXXX_railway";         // MySQL Database Name
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$conn->set_charset("utf8");
+?>
